@@ -1,0 +1,124 @@
+/* CSS стили админ части фреймворка */
+body{
+    padding:10px;
+    background-color: #F5F5F5;
+    margin-top:-50px;
+}
+small.copy{
+    color:#CECECE;
+}
+small.copy:hover{
+    color:gray;
+}
+div.acontent{
+  padding: 15px;
+  width: 82%;
+  text-align: left;  
+  border-left:1px solid #F8F8F8;
+  border-right:1px solid #F8F8F8;
+  height:auto;
+  display: inline-block;
+  float: none;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border:1px solid #DDDDDD;
+  min-height:600px;
+}
+.addpage{
+    width:100%;
+}
+hr.ahr{
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EEEEEE;
+  border-style: dashed none;
+  border-width: 3px 0;
+  margin: 18px 0;
+}
+textarea#content{
+    width:80%!important;
+}
+table.buttons{
+    width:100%;
+}
+table.buttons td{
+    width:50%;
+}
+table.addmoduleformtable td{
+    padding:10px;
+} 
+table.table{
+    margin-top: -30px;
+}
+div.admin-panel-left{
+    width:15%;
+    float:left;
+    display: inline;
+    margin-left:5px;
+    min-width:220px;
+
+}
+.ng-cloak {
+    display: none;
+}
+.cm-s-default{
+    min-height:500px;
+    border:1px solid  #D1D1D1;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+pre.min{
+    height:60px!important;
+    overflow:auto; 
+    font-size: 10px;
+}
+code.mini{
+    font-size:11px;
+}
+textarea.desc{
+    width:600px!important;
+    height: 300px;
+}
+.notlong{
+    width:90px;
+}
+div.images_new_galery{
+  border:1px solid #DDDDDD;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    padding:10px;
+    margin-bottom:10px;
+}
+table.itable{
+   border-collapse: separate;
+}
+td.itd{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #F8E9E9;
+    padding: 5px;
+    border: 1px solid #DDDDDD;
+}
+img.circle{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color:white;
+    padding:2px;
+    border: 1px solid #DDDDDD;
+}
+td.metaimages{
+    padding:3px;
+}
+table.meta td{
+    padding:13px;
+}

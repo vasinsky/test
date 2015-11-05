@@ -1,0 +1,106 @@
+YaFM 1.0.5
+YaFM stands for Yet Another File Manager
+It is a web-based file manager for UNIX-like operating systems
+
+Copyright (c) 2003-2004 Andrey Petrov
+Some ideas and HTML code borrowed from Adam Sutton's phpFtp project
+
+WHAT'S NEW
+
+1.0.5
+This is a new feature and bugfix release of YaFM but there may still be a few gotchas.
+* File Finder implemented
+* HTTPS compatible (https://yourhost/cgi-bin/yafm.phps now works)
+* You can keep using YaFM while a download is in progress
+* Downloads only timeout after one hour
+* Login fixes
+* YaFM looks better now on Internet Explorer
+* More layout fixes
+
+1.0.4
+This is a bugfix release of YaFM but there may still be a few gotchas.
+* New look and feel thanks to Chris
+* The file editor in versions prior to 1.0.4 contains a bug when 
+magic_quotes_gpc is enabled which is the default for many platforms. 
+This bug causes the file that is being edited to be corrupted. 
+The issue is resolved in this version.
+* A saner authentication scheme. I still don't like it but it least 
+it should be now easier to use different accounts with different
+permissions. The old behavior when any username can login with any 
+password has been removed.
+* Fixed a some other minor bugs
+
+HISTORY 
+YaFM is a fork off hostlib's file manager.
+The hostlib project aims at producing a Linux distribution customized
+and optimized for shared web hosting which hopefully one day will be 
+released under the GPL license and then YaFM and hostlib's file manager 
+will be merged into one project again.
+
+INSTALLATION
+Note: most of these instructions apply to RedHat-like systems.
+In RedHat the default webroot for apache is /var/www/html and
+CGI programs are placed into /var/www/cgi-bin and this layout is
+respected in the .tar.gz archives and RPMs you've downloaded from 
+YaFM's website.
+
+Also the assumed location of your php CGI executable is /usr/bin/php
+and the PHP configuration file is assumed to be in /etc/php.ini
+If your installation differs or you want to install YaFM to another 
+location please extract the archives manually, also you may have to
+modify the first line of the yafm.phps script!
+
+Quick instructions:
+
+If you've got the .tar.gz package install it as follows:
+# tar --directory=/ -xvzf /path/to/yafm-release.tar.gz
+
+If you've got the .tar.bz2 package install it as follows:
+# bzcat /path/to/yafm-release.tar.bz2 | tar --directory=/ -xv
+
+If you've got the RPM, install it as follows:
+# rpm -Uvh /path/to/fileman-release.rpm
+
+(note: replace yafm-release with the respective release number, e.g. yafm-1.0.5)
+
+Now you should have a working YaFM installation, you can access it at
+http://your-host-name/cgi-bin/yafm.phps
+WARNING: by default two accounts are created user1 with password1 and 
+user2 with password2
+Please edit the login.inc file to change accounts
+
+TROUBLESHOOTING
+You're may experience the following problem with CGI programs
+written in PHP :
+Security Alert! The PHP CGI cannot be accessed directly.
+
+Here is a brief explanation: it is insecure to have an interpreter such as
+php inside your cgi-bin folder. However this is not the case! Your php
+interpreter is most likely somewhere in /usr/bin/php and not in cgi-bin. 
+However PHP is not smart enough to understand this so it issues that warning 
+which you can safely disable by adding the following line in your /etc/php.ini
+cgi.force_redirect = 0
+This is the quick (and safe) workaround but if you want to know more about 
+this issue please read the PHP manual on the subject: 
+http://php.net/security.cgi-bin
+
+FAQ
+Q. Why is YaFM implemented as a CGI script and is placed inside the cgi-bin 
+folder (or any other script alias folder) of my webserver?
+A. In order to take advantage of the suExec or cgiwrapper mechanisms that 
+may be configured on your web server. This makes possible to run YaFM under
+the unix user that owns the virtual apache domain instead of the user under
+which apache and mod_php applications run. This means greatly improved
+security.
+
+Q. How do I set up user authentication?
+A. There still isn't a proper implementation for that in YaFM mostly because
+YaFM's origins (see HISTORY). Authentication in hostlib is provided by the
+hostlib framework and the file manager doesn't really need to do this itself.
+Currently you should describe all users in the login.inc file but this is 
+probably not the most secure or flexible way to do it.
+Feel free to implement your own fm_login() routines.
+
+CONTACT
+Send requests for enhancements and bug reports to andreypetrov@yahoo.com
+Or post at the support forums at http://sourceforge.net/projects/yafm/

@@ -1,0 +1,8 @@
+23/01/2014 13:28:20
+/?mode=admin&route=addpage
+->http://fw.local/?mode=admin&route=addpage
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.76 Safari/537.36
+127.0.0.1
+insert into pages (name,title,description,keywords,created,preview, content,display,sid) values 
+                   ('blog','блог','блог', 'блог',
+                   '2014-01-23 13:28:20', '<p>это страница блога</p>', '<p>это страница блога</p>', '1','2')--->>>Unknown column 'preview' in 'field list'

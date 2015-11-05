@@ -1,0 +1,38 @@
+AddDefaultCharset utf-8
+Options +FollowSymLinks
+Options -Indexes
+
+DirectoryIndex index.php
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^(admin/)].*)$ index.php?q=$1\.html [L,QSA]
+RewriteRule ^((admin/).*)$ index.php?q=$1 [L,QSA]
+
+#"400 Bad Request", 
+ErrorDocument  400 /app/tpls/errorpages/400.php 
+#"401 Authorization Required", 
+ErrorDocument  401 /app/tpls/errorpages/401.php 
+#"403 Forbidden", 
+ErrorDocument  403 /app/tpls/errorpages/403.php 
+#"404 Not Found", 
+ErrorDocument  404 /app/tpls/errorpages/404.php 
+#"500 Internal Server Error", 
+ErrorDocument  500 /app/tpls/errorpages/500.php 
+
+RewriteCond %{HTTP_HOST} .
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+#php_flag register_globals Off
+#php_value safe_mode 0
+#php_flag zlib.output_compression On
+#php_value zlib.output_compression_level 5
+#php_value magic_quotes_gpc                0
+#php_value session.auto_start              0
+#php_value mbstring.http_input             pass
+#php_value mbstring.http_output            pass
+#php_value mbstring.encoding_translation   0
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#advedit_dlg.codetitle}</title>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/edit_area_loader.js"></script>
+
+
+
+
+	<script type="text/javascript">
+tinyMCEPopup.requireLangPack();
+
+window.onload=function(){
+   editAreaLoader.init({
+			id: "exemple1",	
+			start_highlight: true,	
+			font_size: "10",
+			font_family: "monospace",
+			allow_resize: "both",
+			allow_toggle: false,
+			language: "en",
+			syntax: "html",	
+			toolbar: "save,load,|,charmap, |, search, go_to_line, |, undo, redo, |, select_font, |, change_smooth_selection, highlight, syntax_selection, reset_highlight, fullscreen,|, help",
+		  plugins: "charmap,syntax_selection",
+		 	charmap_default: "arrows",
+			syntax_selection_allow: "php,php2,js,python,html,css", 	
+      save_callback: "saveconte",
+      load_callback: "reladcont"
+		});
+   // editAreaLoader.setValue("exemple1", 'gatto');
+    editAreaLoader.setValue("exemple1", tinyMCEPopup.editor.getContent());
+}		
+
+function saveconte(id, val){
+    tinyMCEPopup.editor.setContent(val);
+}
+
+function reladcont(ix,val){
+    if(confirm('Reload ?')){
+          editAreaLoader.setValue("exemple1", tinyMCEPopup.editor.getContent());
+    }
+}
+
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+<form>
+<textarea id="exemple1" style="height:560px; width:700px;" name="test_1"></textarea>
+</form>
+</body>
+</html>

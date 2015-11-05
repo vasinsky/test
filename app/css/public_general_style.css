@@ -1,0 +1,75 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin:0px;
+    padding: 0px; 
+
+}
+.contWelcome{
+    background-color: #5C4383;
+    color:white;
+    padding-bottom: 15px;
+}
+#top{
+    z-index: 1!important;
+}  
+.rc-anchor {
+    -webkit-align-content: center;
+    align-content: center;
+}
+#frame{
+    background-image: url('/app/images/framebg.png');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    z-index:100;
+}
+#blockformenter{
+    display: none;
+    width:334px!important;
+    position: absolute!important;
+    z-index:2;
+    top: 10%;
+    left: 50%;
+    margin-left: -157px!important; 
+    background-color: #E9EAEE; 
+    padding: 15px;  
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.51);
+    -moz-box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.51);
+    box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.51);    
+}
+#blockformregistrate{
+    display: none;
+    width:334px!important;
+    position: absolute!important;
+    z-index:102;
+    top: 10%;
+    left: 50%;
+    margin-left: -157px!important;   
+    background-color: #E9EAEE;  
+    padding: 15px;  
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;     
+    -webkit-box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.51);
+    -moz-box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.51);
+    box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.51);    
+}
+.formbutton{
+    width:304px;
+    height: 50px;
+    background-color: #563D7C;
+    color:white;
+}
+.vk{
+    border: 1px solid #EDF1F5;
+    margin: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;      
+}
+

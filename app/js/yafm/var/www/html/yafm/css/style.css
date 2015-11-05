@@ -1,0 +1,415 @@
+/*
+ * CSS Specification for the basic graphical interface
+ */
+
+/*
+ * Colours 
+ *
+ *   #000000
+ *   #003366
+ *   #336699
+ *   #6688aa
+ *   #6699cc
+ *   #bbccdd
+ *   #ddeeff
+ *   #ffffff
+ *
+ *   #99ccff
+ */
+
+/*
+ * Define basic Style
+ */
+
+body 
+{
+  background-color    : white;
+  color               : black;
+  width               : 95%;
+  font-family         : arial, helvetica, sans-serif;
+}
+
+table.client
+{
+  background  : #FFFFFF;
+  color       : #ffffff;
+  padding     : 1px;
+  width       : 100%;
+}
+
+a:link, a:visited, a:active
+{
+  background-color : transparent;
+  color            : #000000;
+  text-decoration  : none;
+}
+
+a:hover
+{
+  background-color : transparent;
+  color            : #000000;
+  text-decoration  : underline;
+}
+
+/*
+ * Footer links 
+ */
+a.footer-link:link, a.footer-link:visited, a.footer-link:active
+{
+  background-color : transparent;
+  color            : #ffffff;
+  text-decoration  : none;
+}
+
+a.footer-link:hover
+{
+  background-color : transparent;
+  color            : #ffffff;
+  text-decoration  : underline;
+}
+
+
+/*
+ * Form style
+ */
+input, select
+{
+  font-size           : 10pt;
+}
+
+textarea
+{
+  width               : 100%;
+  height              : 30em;
+
+  font-size           : 10pt;
+}
+ 
+input.submit, input.reset, input.button
+{
+	background-color    : #FFFFFF;
+	color               : #000000;
+	border              : 1px solid #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+input.text, input.file, option.text, select.text
+{
+  background-color     : #7C98C2; /*#336699;*/ /* #6688aa */
+  color                : #ddeeff; /* #ddeeff */
+  border               : 1px solid #000000;
+}
+
+input.textodd, input.fileodd
+{
+  background-color : #ddeeff;
+  color            : #000000;
+  border           : inset 2px;
+}
+
+input.image
+{
+  border               : 0px;
+}
+
+/* Logout Image */
+#logout
+{
+  background-color     : transparent;
+  color                : #ddeeff;
+  border               : 0px;
+}
+
+#logout:hover
+{
+  font-weight          : bold;
+}
+
+select
+{
+  background-color     : #336699;
+  color                : #ffffff;
+}
+
+/*
+ * Header and Footer
+ */
+tr.header1, tr.footer1
+{
+  background-color     : #7C98C2;
+  color                : #FFFFFF;
+  font-size            : 16pt;
+  font-weight          : bold;
+}
+
+tr.spacer
+{
+  background-color     : #6699cc;
+  color                : #6699cc;
+  font-size            : 4pt;
+  height               : 10px
+}
+
+td.header2, tr.header2, tr.footer2
+{
+	background-color     : #7C98C2;
+	color                : #FFFFFF;
+	font-size            : 11px;
+	height               : 20px;
+	text-align           : right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+/*
+ * Client Section Table format
+ */
+table.client-section
+{
+  background-color : #ffffff;
+  color            : #000000;
+
+  width            : 100%;
+
+  font-family      : arial, helvetica, sans-serif;
+  font-size        : 10pt;
+  text-align       : left;
+
+  /*border           : 2px solid white;*/
+}
+
+tr.client-section-header, tr.client-section-footer
+{
+  background-color : #7C98C2;
+  color            : #ddeeff;
+
+  font-weight      : bold;
+  font-family      : arial, helvetica, sans-serif;
+  font-size        : 12px;
+  text-align       : left;
+}
+
+tr.client-section-even
+{
+  background-color : #ddeeff;
+  color            : #000000;
+}
+
+tr.client-section-odd
+{
+  background-color : #bbccdd;
+  color            : #000000;
+}
+
+th.client-section-heading, tr.client-section-heading
+{
+  background-color : #000000;
+  color            : #ffffff;
+
+  font-weight      : bold;
+  text-align       : left;
+}
+
+td.client-section-entry
+{
+}
+
+/*
+ * Message list
+ */
+table.message-list
+{
+  background-color : #7C98C2;
+  color            : #ddeeff;
+
+  width            : 100%;
+
+  font-family      : arial, helvetica, sans-serif;
+  font-size        : 12px;
+  text-align       : left;
+
+  border           : 1px solid white;
+} 
+
+tr.message-list-even
+{
+  background-color : #E5EAF1;
+  color            : #000000;
+}
+
+tr.message-list-odd
+{
+  background-color : #bbccdd;
+  color            : #000000;
+}
+
+td.message-list-debug
+{
+  background-color : #003366;
+  color            : #6666ff;
+
+  width            : 100px;
+
+  font-weight      : bold;
+  text-align       : left;
+}
+
+td.message-list-error
+{
+  background-color : #003366;
+  color            : #ff0000;
+
+  width            : 100px;
+
+  font-weight      : bold;
+  text-align       : left;
+}
+
+td.message-list-warn
+{
+  background-color : #003366;
+  color            : #ff9900;
+
+  width            : 100px;
+
+  font-weight      : bold;
+  text-align       : left;
+}
+
+td.message-list-info
+{
+  background-color : #7C98C2;
+  color            : #ffffff;
+  width            : 100px;
+  font-weight      : bold;
+  text-align       : left;
+  letter-spacing   : 2px;
+}
+
+td.message-list-entry
+{
+}
+
+
+/*
+ * Login 
+ */
+table.login
+{
+  background-color : #ffffff;
+  color            : #000000;
+  padding          : 0px;
+  font-family      : monospace;
+  font-size        : 9pt;
+}
+
+tr.login-even
+{
+  background-color : #ddeeff;
+  color            : #000000;
+}
+
+tr.login-odd
+{
+  background-color : #bbccdd;
+  color            : #000000;
+}
+
+tr.login-header, tr.login-footer
+{
+  background-color : #6688aa;
+  color            : #ddeeff;
+  height           : 25px;
+
+  font-size        : 12pt;
+  font-family      : arial, helvetica, sans-serif;
+  font-weight      : bold;
+
+  text-align       : center;
+}
+
+/*
+ * File listing
+ */
+
+table.file-list
+{
+  background-color : #ffffff;
+  color            : #000000;
+  width            : 100%;
+  padding          : 0px;
+  font-size        : 9pt;
+}
+
+tr.file-list-header, tr.file-list-footer,
+td.file-list-header, td.file-list-footer
+{
+  background-color : #7C98C2;
+  color            : #ddeeff;
+
+  font-weight      : bold;
+  font-family      : arial, helvetica, sans-serif;
+  font-size        : 12px;
+  text-align       : left;
+  letter-spacing   : 2px;
+}
+
+th.file-list-heading, tr.file-list-heading
+{
+  background-color : #E5EAF1;
+  color            : #7C98C2;
+  font-weight      : bold;
+}
+
+tr.file-list-even
+{
+  background-color : #FFFFFF;
+  color            : #000000;
+}
+
+tr.file-list-odd
+{
+  background-color : #E5EAF1;
+  color            : #000000;
+}
+
+input.file-list-entry
+{
+  background-color : transparent;
+  color            : #0000ff;
+
+  border           : 0px;
+  padding-left     : 0px;
+
+  font-family      : monospace;
+  font-size        : 9pt;
+}
+
+input.file-list-entry:hover
+{
+  background-color : transparent;
+  color            : #ff0000;
+  font-weight      : bold;
+}
+  
+/*
+ * Other Form areas
+ */
+.form-area
+{
+  background-color : #6688aa;
+  color            : #ddeeff;
+
+  font-weight      : bold;
+  font-family      : arial, helvetica, sans-serif;
+  font-size        : 10pt;
+  text-align       : left;
+}
+
+input.checkbox, textarea, input.text_even, select.text_even {
+  background-color  : #ffffff;
+  border              : 1px solid #7C98C2;
+  font-family        : arial, helvetica, sans-serif;
+  color              : #000000;
+}

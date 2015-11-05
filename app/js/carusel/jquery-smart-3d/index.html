@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Demo / Smart3D jQuery Plugin v 0.3.3</title>
+        <!-- Including jQuery -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <!-- Including ulslide jQuery plugin -->
+        <script type="text/javascript" src="js/jquery.smart3d.js"></script>
+		
+        <style type="text/css">
+            /* Some document style */
+            body {
+                background-color: #555;
+                color: #fff;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+                outline: none;
+            }
+            a:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+            h1 {
+                font-size: 15pt;
+            }
+            h2 {
+                font-size: 13pt;
+            }
+            h3 {
+                font-size: 12pt;
+            }
+            h4 {
+                font-size: 10pt;
+            }
+            /* Demo 1 */
+            #smartdemo1 {
+                width: 600px;
+                height: 450px;
+                overflow: hidden;
+                border:2px solid #444444;
+				margin: 0;
+            }
+            #smartdemo1 li{
+                width: 800px;
+                height: 600px;
+            }
+
+            /* Demo 2 */
+            #smartdemo2 {
+                width: 600px;
+                height: 450px;
+                overflow: hidden;
+                border:2px solid #444444;
+				margin: 0;
+            }
+            #smartdemo2 li{
+                width: 800px;
+                height: 600px;
+            }
+			
+            /* Demo 3 */
+            #smartdemo3 {
+                width: 660px;
+                height: 170px;
+                overflow: hidden;
+                border:2px solid #444444;
+                margin: 0;
+            }
+            #smartdemo3 li{
+                width: 844px;
+                height: 170px;
+            }
+            #smartdemo3 .content {
+                padding: 0 105px;
+                color: #fff;
+                text-shadow: 0 0 8px #000000;
+            }
+        </style>
+		
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#smartdemo1').smart3d();
+                $('#smartdemo2').smart3d({
+									invertHorizontal: true, 
+									invertVertical: true
+								});
+				
+                $('#smartdemo3').smart3d({ last_is_static: true });
+            });
+        </script>
+    </head>
+    <body>
+		<h1><a href="http://4coder.info/en/code/jquery-plugins/smart3d/">&larr; Back to the 4Coder.Info</a></h1>
+        <h1>Demo / Smart3D jQuery Plugin v 0.3.3</h1>
+
+		<hr/>
+        <h3>Demo 1</h3>
+        <ul id="smartdemo1">
+            <li><img src="images/1.png" /></li>
+            <li><img src="images/2.png" /></li>
+            <li><img src="images/3.png" /></li>
+            <li><img src="images/4.png" /></li>
+            <li><img src="images/5.png" /></li>
+        </ul>
+
+		<hr/>
+        <h3>Demo 2 (inverted)</h3>
+        <ul id="smartdemo2">
+            <li><img src="images/1.png" /></li>
+            <li><img src="images/2.png" /></li>
+            <li><img src="images/3.png" /></li>
+            <li><img src="images/4.png" /></li>
+            <li><img src="images/5.png" /></li>
+        </ul>
+
+		<hr/>
+        <h3>Demo 3</h3>
+        <ul id="smartdemo3">
+            <li><img src="mindscape/mindscape1.png" /></li>
+            <li><img src="mindscape/mindscape2.png" /></li>
+			<li>
+				<div class="content">
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<h2>Lorem ipsum dolor sit amet, consectetuer elit</h2>
+					<h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h3>
+				</div>
+			</li>
+        </ul>
+		<em>Re: Would it be possible to use it as a background effect for a menu?</em>		
+
+        <hr/>
+        <div id="copy">
+            Copyright &copy; <a href="http://4coder.info">4Coder.Info</a> | <a href="http://4coder.info/en/code/jquery-plugins/smart3d/">More about Smart3D</a>
+        </div>
+    </body>
+</html>

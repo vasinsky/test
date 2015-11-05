@@ -1,0 +1,1 @@
+This template of new Module "Comments"
