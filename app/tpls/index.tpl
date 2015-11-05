@@ -37,11 +37,11 @@
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Пароль</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Подтверждение</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
       </div>  
       <button type="submit" class="btn btn-default formbutton">Создать</button>
     </form>
