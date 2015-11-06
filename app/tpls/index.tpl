@@ -49,13 +49,17 @@
 </div>    
 
 
+
     <div class="bs-docs-header contWelcome" id="content" tabindex="-1">
       <div class="container">
         <h1>Планировщик стены вконтакте.</h1>
         <p>Автопостинг постов на стену/ закрепление / открепление постов по расписанию</p>
       </div>
     </div>
-    
+
      <div class="container bs-docs-container">
      <center><img class="vk" src="/<?=PATH;?>app/images/vk.png"/><img class="vk" src="/<?=PATH;?>app/images/vkban.png"/></center>
      </div>
+
+
+	 

@@ -22,6 +22,7 @@
   <script type="text/javascript" src="/<?=PATH;?>app/js/public_js.js"></script>
 </head>
 <body>
+<div class="wrapper">
 
     <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
       <div class="container">
